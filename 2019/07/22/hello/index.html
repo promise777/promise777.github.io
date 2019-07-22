@@ -8,14 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hello | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="#该命令用来从仓库中下载一个镜像docker pull xxxxxxxxxx   xxx 为镜像地址 #查看目前正在运行的容器的详细信息docker ps #查看目前正在运行的容器的详细信息docker ps -a 查看所有容器 #看看所有imagesdocker images  #该命令用来创建一个容器并且将容器中的某个端口映射到宿主机端口docker run -d -p 宿主机端口:容器端口">
+<meta property="og:type" content="article">
 <meta property="og:title" content="hello">
 <meta property="og:url" content="http://yoursite.com/2019/07/22/hello/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#该命令用来从仓库中下载一个镜像docker pull xxxxxxxxxx   xxx 为镜像地址 #查看目前正在运行的容器的详细信息docker ps #查看目前正在运行的容器的详细信息docker ps -a 查看所有容器 #看看所有imagesdocker images  #该命令用来创建一个容器并且将容器中的某个端口映射到宿主机端口docker run -d -p 宿主机端口:容器端口">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-22T07:44:59.177Z">
+<meta property="og:updated_time" content="2019-07-22T10:09:05.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hello">
+<meta name="twitter:description" content="#该命令用来从仓库中下载一个镜像docker pull xxxxxxxxxx   xxx 为镜像地址 #查看目前正在运行的容器的详细信息docker ps #查看目前正在运行的容器的详细信息docker ps -a 查看所有容器 #看看所有imagesdocker images  #该命令用来创建一个容器并且将容器中的某个端口映射到宿主机端口docker run -d -p 宿主机端口:容器端口">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -167,7 +170,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#该命令用来从仓库中下载一个镜像<br>docker pull xxxxxxxxxx   xxx 为镜像地址</p>
+<p>#查看目前正在运行的容器的详细信息<br>docker ps</p>
+<p>#查看目前正在运行的容器的详细信息<br>docker ps -a 查看所有容器</p>
+<p>#看看所有images<br>docker images </p>
+<p>#该命令用来创建一个容器并且将容器中的某个端口映射到宿主机端口<br>docker run -d -p 宿主机端口:容器端口 + 镜像地址(REPOSITORY)<br>注：1)在选择宿主机端口时要确保服务器打开该端口<br>    2）选择其端口时要注意该容器的应用是否在监听该端口<br>eg：apache 默认80端口</p>
+<h1 id="普通新建并启动"><a href="#普通新建并启动" class="headerlink" title="普通新建并启动"></a>普通新建并启动</h1><p>docker run –name weblogic -it -p 7099:7001 radudobrinescu<br>-t -i</p>
+<p>#该命令是将服务器本地的文件拷贝到docker容器中<br>docker cp 本地文件路径 容器id:在容器中的路径<br>宿主机与容器之间的拷贝<br>1 从容器拷贝文件到宿主机<br>拷贝方式为：<br>docker cp 容器名：容器中要拷贝的文件名及其路径 要拷贝到宿主机里面对应的路径<br>例如，将容器：mycontainer中路径：/opt/testnew/的文件：file.txt<br>拷贝到宿主机：/opt/test/路径下，<br>在宿主机中执行命令如下：<br>docker cp mycontainer:/opt/testnew/file.txt /opt/test/<br>2 从宿主机拷贝文件到容器：<br>docker cp /opt/test/file.txt mycontainer:/opt/testnew/</p>
+<p>#进入到docker容器内部的bash命令系统，可以对docker 内部的文件进行操作<br>docker exec -it id /bin/bash<br>-i :即使没有附加也保持STDIN 打开<br>-t :分配一个伪终端</p>
+<p>#删除容器<br>docker rm id/name</p>
+<p>#关闭容器<br>docker stop id/name</p>
+<p>#删除容器<br>docker rm id or name 删除image</p>
+<p>#更改镜像名字<br>docker tag old_name new_name</p>
+<p>#删除镜像<br>docker rmi repository </p>
+
       
 
       
@@ -237,6 +253,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/07/22/Web -- CTF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CTF
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
